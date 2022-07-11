@@ -1,4 +1,4 @@
-const { atualizarJogador, deleteJogador, lerJogador, criarJogador} = require("../services/jogadoresService.js")
+const { atualizarJogador, excluiJogador, lerJogador, criarJogador} = require("../services/jogadoresService.js")
 
 const leituraJogador = async function leituraJogador(req, res){
     const jogadorResponse = await lerJogador();
@@ -13,7 +13,7 @@ const criaJogador = async function cadastroJogador(req, res){
         res.send(`Não foi possível criar o jogador! Erro:${error.message}`);
     }
 }
-const atualizaJogador = (req, res) => {
+const atualizaJogador = async function(req, res){
     const id = req.params.id;
     const dadosJogador = req.body
     try {
@@ -23,7 +23,7 @@ const atualizaJogador = (req, res) => {
         res.send(`Não foi possível excluir o jogador! Erro: ${error.message}`);
     }
 }
-const removerJogador = (req, res) => {
+const removerJogador = async function(req, res) {
     const id = req.params.id;
     try {
         await excluiJogador(id);

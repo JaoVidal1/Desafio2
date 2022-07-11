@@ -1,7 +1,6 @@
-<html ng-app="Desafio2">
+<html ng-app="crud">
 <head>
     <title> Desafio2 </title>
-    <script src="lib/angular/angular.min.js"></script>
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular/controllers.js"></script>
     <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.css">
@@ -55,13 +54,15 @@
             </tr>
         </table>
         <hr/>
-        <input class="form-control" type="text"ng-model="jogador.nome" placeholder="Nome"/>
-      
-        <input class="form-control" type="number" ng-model="jogador.moedas"placeholder="Moedas"/>
+        {{msg}}
+        <form>
+            <input class="form-control" type="text" ng-model="jogador.nome" placeholder="Nome"/>          
+            <input class="form-control" type="number" ng-model="jogador.moedas" placeholder="Moedas"/>
+        </form>
       
         <button class="btn btn-primary btn-block" ng-click="adicionarJogador(jogador)" ng-disabled="!jogador.nome || !jogador.moedas"> Adicionar Jogador</button>
-        <button class="btn btn-danger btn-block" ng-click="apagarJogador(jogador)" ng-disabled="!isJogadorSelecionado(jogadores)"> Apagar Jogador</button>
-        <button class="btn btn-danger btn-block" ng-click="editarJogador(jogador)" ng-disabled="!isJogadorSelecionado(jogadores)"> Editar Jogador</button>
+        <button class="btn btn-danger btn-block" ng-click="apagarJogador()" ng-disabled="!isJogadorSelecionado(jogadores)"> Apagar Jogador</button>
+        <button class="btn btn-danger btn-block" ng-click="editarJogador()" ng-disabled="!isJogadorSelecionado(jogadores)"> Editar Jogador</button>
        
     
 
