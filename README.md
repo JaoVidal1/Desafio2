@@ -9,3 +9,18 @@ A listagem deverá apresentar o numero moedas, medalhes e troféus de seu respec
 usuário.
 Deverá ser utilizado o conceito de TDD para desenvolvimento dos testes.
 Deverá ser utilizado o Bootstrap para a criação das interfaces.
+
+# Tecnologias
+-MongoDB
+-Mongoose
+-AngularJS
+-Bootstrap
+-Jest
+-NodeJS
+-Express
+-Mocha
+-Chai
+-Javascript
+-TDD
+-Git
+-Postman
